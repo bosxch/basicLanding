@@ -15,7 +15,7 @@ const Transparency: React.FC = () => {
     <h5>Cash out right away without cost</h5>
 
     <p>
-    Whether you're on the go or at home, our user-friendly web and mobile app allow you to manage your digital assets with ease. Enjoy secure, real-time transactions and personalized insights at your fingertips.
+    Whether you&apos;re on the go or at home, our user-friendly web and mobile app allow you to manage your digital assets with ease. Enjoy secure, real-time transactions and personalized insights at your fingertips.
         <br/><br/>
         Say goodbye to lengthy processing times and hidden fees. Our platform empowers you to cash out your digital assets quickly and effortlessly, whenever you need
     </p>

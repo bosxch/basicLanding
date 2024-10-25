@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import style from '../styles/Navbar.module.css';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -138,7 +139,7 @@ const Navbar: React.FC = () => {
                     </li>
                 ))}
             </ul>
-            <img src='/images/android-chrome-512x512.png' alt='boostedLogo' className={style.imgLogo} />
+            <Image src='/images/android-chrome-512x512.png' alt='boostedLogo' className={style.imgLogo} />
         </div>
     );
 };

@@ -7,7 +7,6 @@ import Transparency from './sections/Transparency';
 import UseCrypto from './sections/UseCrypto';
 // import Services from './sections/Services.tsx'; // Ruta correcta al componente Services
 // import Contact from './sections/Contact.tsx'; // Ruta correcta al componente Contact
-import styles from './styles/Home.module.css'
 import './styles/global.css'
 
 export default function HomePage() {

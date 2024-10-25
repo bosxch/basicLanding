@@ -1,6 +1,5 @@
 import styles from '../styles/UseCrypto.module.css';
 import MainBtn from '../components/MainBtn';
-import Bitcoin from '../components/Bitcoins';
 import Cryptos from '../components/Cryptos';
 
 const UseCrypto: React.FC = () => {

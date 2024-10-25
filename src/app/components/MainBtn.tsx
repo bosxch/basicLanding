@@ -1,7 +1,7 @@
 import '../styles/MainBtn.css'
 
 interface MainBtnProps {
-    text: String // Propiedad para saber si la navbar está fija
+    text: string // Propiedad para saber si la navbar está fija
   }
   
 
