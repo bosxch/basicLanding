@@ -1,0 +1,90 @@
+
+
+.container {
+    height: 150vh; /* Aumenta la altura para permitir scroll */
+    position: relative;
+  }
+  
+  .background {
+    background-image: radial-gradient(circle at center, var(--color-background-deg) 50%, var(--color-background));
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 8vh;
+    padding-inline: 5vw;
+    position: relative;
+  }
+  
+  .title {
+    font-size: 4vw;
+    color: var(--color-text);
+    font-weight: 900;
+    line-height: 1.3;
+    text-align: center;
+    transform: scale(1, 1.5);
+
+    @media screen and (max-width: 760px) {
+        font-size: 8vw;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .textContainer h1 {
+      line-height: 1;
+    }
+    .textContainer h2{
+      padding-top: 1rem;
+    }
+  }
+
+  
+  .power-key {
+    background: var(--color-primary); /* Degradado radial del color */
+    padding-inline: 2vw;
+    border-radius: 50px;
+    font-weight: 700;
+  }
+
+  .subText {
+    font-size: large;
+    color: var(--color-text);
+    padding-top: 5vh;
+    text-align: center;
+    @media screen and (max-height: 760px) {
+      font-size: medium;
+      padding-top: 2vh;
+      line-height: 1.25;
+    }
+
+  }
+
+  .boosted{
+    padding-top: 1vh;
+    color: var(--color-secondary);
+    background: radial-gradient(circle, var(--color-secondary), var(--color-primary)); /* Degradado radial del color */
+    -webkit-background-clip: text;  /* Clip del fondo al texto */
+    -webkit-text-fill-color: transparent; /* Texto transparente para ver el degradado */
+    font-weight: 900;
+    font-size: large;
+    text-align: center;
+  }
+
+  .textContainer{
+    padding-bottom: 5vh;
+    @media screen and (max-height: 900px) {
+      padding-bottom: 3vh;
+    }
+  }
+
+  .bnsDisplayer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+/*-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<->->->->->->->->->->->->->->->->->->->*/
+/*------------------------<-<-<-<-<-MAIN BTN->->->->->------------------------*/
+/*-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<->->->->->->->->->->->->->->->->->->->*/

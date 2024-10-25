@@ -1,0 +1,285 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    max-height: min-content;
+    padding-inline: 5vw;
+    padding-top: 3vh;
+  }
+  
+  .item1,
+  .item2,
+  .item3,
+  .item4 {
+    border-radius: 30px;
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    background-color: var(--color-primary);
+    position: relative;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 2rem 0;
+    border: 2px solid var(--color-text);
+    min-height: 300px; /* Añade un mínimo para evitar suprimir contenido */
+  }
+  
+  .item2 {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+    background-color: var(--color-text);
+    color: var(--color-primary);
+  }
+  
+  .item3 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    background: linear-gradient(to top right, var(--color-primary), var(--color-secondary));
+  }
+  
+  .item4 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    background: linear-gradient(to top right, var(--color-secondary), var(--color-primary));
+  }
+  
+  .padlockImg {
+    height: 50vh;
+    width: auto;
+    margin-top: -3vh;
+  }
+  
+  .bentoTitle {
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    font-weight: 800;
+    transform: scale(1, 2);
+  }
+  
+  .bentoText {
+    font-size: large;
+    margin-block: 2vh;
+    font-weight: 700;
+  }
+  
+  .crewMedia {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .crewMedia svg {
+    font-size: 5vw;
+    margin-inline: 2vw;
+  }
+  
+  .socialMedia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2vw;
+    width: 80%;
+    font-size: 3.5vw;
+    justify-items: center;
+  }
+  
+  .socialMedia svg,
+  .crewMedia svg {
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .socialMedia svg:hover,
+  .crewMedia svg:hover {
+    transform: scale(1.25);
+  }
+  
+  /* Media Queries para hacer el layout responsive */
+  @media (max-width: 1024px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+  
+    .item1, .item2, .item3, .item4 {
+      grid-column: span 2;
+      grid-row: auto;
+    }
+
+    .crewMedia {
+        height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    }
+
+    .crewMedia svg {
+        font-size: 15vw !important;
+    }
+
+    .socialMedia {
+        gap: 5vw;
+    }
+
+    .socialMedia svg {
+        font-size: 10vw;
+    }
+
+    .padlockImg {
+        height: 20vh;
+    }
+
+    .bentoTitle{
+        font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: 800;
+    transform: scale(1, 1.5);
+    text-align: center;
+    }
+
+    .item1{
+        min-height: 250px;
+        padding-block: 1rem;
+    }
+
+    .carouselContent span {
+        font-size: 3rem !important;
+    }
+
+    .carouselTopWrapper,
+    .carouselBottomWrapper {
+        display: flex;
+        align-items: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+    }
+  
+    .item1, .item2, .item3, .item4 {
+      grid-column: span 1;
+      grid-row: auto;
+    }
+  }
+  
+  /* Evita que el carrusel pierda su contenido al ser más pequeño */
+  .carouselTopWrapper, .carouselBottomWrapper {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    min-height: 100px; /* Ajusta la altura mínima del carrusel */
+  }
+  
+  .carouselContent span {
+    display: inline-block;
+    padding: 0.5rem;
+    font-size: 3.5rem; /* Ajuste de tamaño de fuente para dispositivos pequeños */
+    font-weight: 800;
+    line-height: 1;
+    transform: scale(1, 1.8);
+    user-select: none; /* Para navegadores modernos */
+    -webkit-user-select: none; /* Para Safari */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para Internet Explorer y Edge */
+  
+  }
+  
+  /* Ajuste adicional en pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .carouselContent span {
+      font-size: 1.5rem; /* Reducir tamaño de texto en dispositivos móviles */
+    }
+  }
+  
+  /* Media Queries para hacer el layout responsive */
+@media (max-width: 1024px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+      grid-template-rows: repeat(4, auto); /* Ajusta las filas automáticamente */
+    }
+  
+    .item1, .item2, .item3, .item4 {
+      grid-column: span 2; /* Cada elemento ocupa las 2 columnas disponibles */
+      grid-row: auto; /* La fila se adapta automáticamente */
+    }
+  
+    .crewMedia {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: row;
+      width: 100%;
+    }
+  
+    .crewMedia svg {
+      font-size: 15vw !important; /* Ajusta el tamaño de los íconos */
+    }
+  
+    .socialMedia {
+      gap: 5vw; /* Mayor espacio entre íconos */
+    }
+  
+    .socialMedia svg {
+      font-size: 10vw; /* Íconos más grandes */
+    }
+  
+    .padlockImg {
+      height: 20vh; /* Reduce la altura de la imagen */
+    }
+  
+    .bentoTitle {
+      font-size: 4vw; /* Título más grande */
+      text-transform: uppercase;
+      font-weight: 800;
+      transform: scale(1, 1.5);
+      text-align: center;
+    }
+  
+    .item1 {
+      min-height: 250px; /* Reduce la altura mínima */
+      padding-block: 1rem;
+    }
+  
+    .carouselContent span {
+      font-size: 3rem !important; /* Ajusta el tamaño del texto en el carrusel */
+    }
+  
+    .carouselTopWrapper,
+    .carouselBottomWrapper {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr; /* Una sola columna */
+      grid-template-rows: repeat(4, auto); /* Las filas se adaptan automáticamente */
+    }
+  
+    .item1, .item2, .item3, .item4 {
+      grid-column: span 1; /* Cada elemento ocupa una columna completa */
+      grid-row: auto; /* La fila se adapta automáticamente */
+    }
+  
+    .carouselContent span {
+      font-size: 1.5rem; /* Ajusta el tamaño del texto en pantallas más pequeñas */
+    }
+  }
+  

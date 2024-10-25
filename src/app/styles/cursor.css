@@ -1,0 +1,61 @@
+.cursor {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animate 1s linear infinite;
+    perspective: 800px;
+}
+@keyframes animate {
+0%{
+   transform: rotateY(0deg);
+}
+100%{
+    transform: rotateY(360deg);
+}
+}
+
+  .cursor-side {
+    position: absolute;
+    width: 340px;  /* Ancho del contenedor */
+    height: 440px; /* Alto del contenedor */
+    animation: rotate 10s infinite linear; /* Animación infinita */
+    transform-style: preserve-3d; /* Mantener el efecto 3D */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra para efecto de grosor */
+  }
+  
+  .cursor-heads, .cursor-tails {
+    backface-visibility: hidden; /* Ocultar la cara trasera cuando no esté de frente */
+    border: 5px solid rgba(255, 255, 255, 0.7); /* Bordes para simular grosor */
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco con algo de transparencia */
+  }
+  
+  .cursor-tails {
+    transform: rotateY(180deg); /* La cara trasera rota 180 grados */
+  }
+  
+  /* Si necesitas caras laterales en tu animación */
+  .cursor:before, .cursor:after {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background: linear-gradient(#000000, #000000);
+    backface-visibility: hidden;
+    transform: rotateY(90deg);
+  }
+  
+  /* Animación de rotación en 3D */
+  @keyframes rotate {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      opacity: 1; /* Mantener visible a mitad de camino */
+    }
+    100% {
+      transform: rotateY(-360deg); /* Rotación completa en sentido contrario */
+      opacity: 1; /* Mantener visible al finalizar */
+    }
+  }
+  

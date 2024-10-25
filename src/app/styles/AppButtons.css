@@ -1,0 +1,141 @@
+.appButtonsContainer{
+    padding-top: 3vh;
+
+    @media screen and (max-height: 760px) and (max-width: 760px) {
+        padding-top: 1vh;
+
+    }
+}
+
+    @media screen and (max-width: 760px) {
+        .appButtonsContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .appButtonsContainer{
+        padding-top: 0;
+    }
+    .appButtonsContainer a{
+        margin-top: 2vh;
+    }
+
+}
+
+/* From Uiverse.io by Yaya12085 */
+/*-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<->->->->->->->->->->->->->->->->->->->*/
+/*--------------------<-<-<-<-<-GOOGLE PLAY BTN->->->->->---------------------*/
+/*-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<->->->->->->->->->->->->->->->->->->->*/
+/* From Uiverse.io by Yaya12085 */
+
+.playstore-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 9999px;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 0.625rem 1.5rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    outline: 0;
+    transition: all  .2s ease;
+    text-decoration: none;
+    @media screen and (min-width: 760px) {
+        margin-right: 1vw;
+
+    }
+  }
+  
+  .playstore-button:hover {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 1);
+  }
+  
+  .icon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  .texts {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+    color: #EDD0C6;
+  }
+  
+  .text-1 {
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+  
+  .text-2 {
+    font-weight: 600;
+    background: radial-gradient(circle, var(--color-secondary), var(--color-primary)); /* Degradado radial del color */
+    -webkit-background-clip: text;  /* Clip del fondo al texto */
+    -webkit-text-fill-color: transparent; /* Texto transparente para ver el degradado */
+
+  }
+
+
+
+
+
+/* From Uiverse.io by Yaya12085 */ 
+/*-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<->->->->->->->->->->->->->->->->->->->*/
+/*--------------------<-<-<-<-<-APPLE STORE BTN->->->->->---------------------*/
+/*-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<->->->->->->->->->->->->->->->->->->->*/
+/* From Uiverse.io by Yaya12085 */
+
+.playstore-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-text);
+    border-radius: 9999px;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 0.625rem 1.5rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    outline: 0;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  
+  .playstore-button:hover {
+    background-color: transparent;
+    color: var(--color-background);
+  }
+  
+  
+  .icon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  .texts {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+  }
+  
+  .text-1 {
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+  
+  .text-2 {
+    font-weight: 600;
+    background: radial-gradient(circle, var(--color-secondary), var(--color-primary)); /* Degradado radial del color */
+    -webkit-background-clip: text;  /* Clip del fondo al texto */
+    -webkit-text-fill-color: transparent; /* Texto transparente para ver el degradado */
+
+  }
+  

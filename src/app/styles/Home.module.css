@@ -1,0 +1,25 @@
+
+.container {
+    height: 200vh; /* Simulación de una página larga */
+    position: relative;
+  }
+  
+  .background {
+    background-image: url('/images/background-image.png'); /* Imagen de fondo en la carpeta public */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .check {
+    height: 200vh;
+  }

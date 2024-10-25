@@ -1,0 +1,28 @@
+.carouselContainer{
+  padding-block: 1vh;
+  background-color: #EDD0C6;
+}
+
+.carouselMain {
+    overflow: hidden;
+    white-space: nowrap; /* Para que el texto no se rompa en múltiples líneas */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #EDD0C6;
+  }
+  
+  .carouselContent {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 400;
+    white-space: nowrap;
+    color: #EB5E28;
+
+  }
+  
+  .char {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, font-weight 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  

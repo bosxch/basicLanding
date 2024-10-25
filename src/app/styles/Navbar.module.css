@@ -1,0 +1,124 @@
+.navbar {
+  z-index: 1000;
+  border-radius: 30px;
+  background: #e3a99537;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 3vh;
+}
+
+.ul {
+  display: flex;
+}
+
+.ul li {
+  display: flex;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+/* Clase para el primer elemento */
+.ul li:first-child {
+  border-radius: 30px;
+}
+
+/* Clase para el elemento activo */
+.active {
+  color: red;
+  background-color: white;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+/* Clase para los elementos a la izquierda del elemento activo */
+.leftActive {
+  background-color: white;
+  border-radius: 0;
+}
+
+/* Clase específica para el primer elemento cuando es parte de leftActive */
+.ul li:first-child.leftActive {
+  border-radius: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+/* Clase para el primer elemento */
+.ul li:first-child {
+  border-radius: 30px;
+}
+
+/* Clase para el elemento activo */
+.active {
+  color: red;
+  background-color: white;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+/* Clase para el último elemento activo */
+.activeLast {
+  border-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Clase para los elementos a la izquierda del último activo */
+.leftActive {
+  background-color: white;
+  border-radius: 0;
+}
+
+/* Clase específica para el primer elemento cuando es parte de leftActive */
+.ul li:first-child.leftActive {
+  border-radius: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+/* Clase para el primer elemento cuando se activa otro elemento */
+.leftOnly {
+  border-radius: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar {
+    width: 90%; /* Reducimos el ancho para móviles */
+    top: auto;  /* Dejamos que el top lo maneje el JavaScript */
+    bottom: 10%; /* Comienza a un 10% desde el fondo */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px; /* Ajuste de redondeo */
+  }
+
+  .ul {
+    flex-direction: column; /* Columna en lugar de fila en móviles */
+    align-items: center;
+  }
+
+  .ul li {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .active, .leftActive {
+    border-radius: 20px; /* Borde redondeado más pequeño para móviles */
+  }
+}
+
+.imgLogo{
+  height: 50px;
+  margin-right: 2vw;
+  background-color: var(--color-accent);
+  border-radius: 30px;
+  padding: 5px;
+}

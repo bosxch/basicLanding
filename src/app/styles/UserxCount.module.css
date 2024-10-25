@@ -1,0 +1,47 @@
+.container {
+    font-size: x-large;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
+    @media screen and (max-width:900px) {
+        flex-direction: column;
+        text-align: center;
+        bottom: 10%;
+    }
+  }
+  
+  .counter {
+    font-weight: bold;
+    font-size: 10vw;
+    background: radial-gradient(circle, var(--color-secondary), var(--color-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    @media screen and (max-width:900px) {
+        font-size: 25vw;
+    }
+
+}
+  
+    .highlight {
+        color: #F19A3E;
+        font-weight: bold;
+      }
+      
+      .textContainer{
+        padding-left: 2vw;
+        @media screen and (max-width:900px) {
+            padding-inline: 3vw;
+        }
+    
+      }
+
+      .br{
+        @media screen and (max-width:900px) {
+          display: none;
+        }
+  
+
+      }

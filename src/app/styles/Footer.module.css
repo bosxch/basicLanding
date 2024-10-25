@@ -1,0 +1,256 @@
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 1rem 5vw;
+  }
+  
+  .footerContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    @media screen and (max-width: 1200px) {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+  }
+  
+  .footerSection {
+    text-align: left;
+  }
+  
+  .footerSection p {
+    color: var(--color-text);
+
+  }
+
+  .footerTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text);
+  }
+  
+  .footerLinks {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footerLinks li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footerLinks li a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 0.3s;
+  }
+  
+  .footerLinks li a:hover {
+    color: var(--color-primary);
+  }
+  
+  .subscribeForm {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .subscribeInput {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 30px;
+    flex: 1;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .subscribeBtn {
+    padding: 0.8rem 2rem;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 30px;
+    color: var(--color-text);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .subscribeBtn:hover {
+    background-color: #ff3b3b;
+  }
+  
+  .footerBottom {
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #444;
+    padding-top: 1.5rem;
+  }
+  
+  .footerBottom p {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .socialIcons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0 0;
+  }
+  
+  .socialIcons li a {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    transition: color 0.3s ;
+  }
+  
+  .socialIcons li a:hover {
+    color: #fff;
+  }
+  
+
+  
+  .card {
+    background: var(--color-text);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .cardTitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+  }
+  
+  .cardTitle svg {
+    margin-left: 10px;
+  }
+  
+  .cardContent {
+    font-size: 1em;
+    color: var(--color-secondary) !important;
+    margin: 15px 0;
+  }
+  
+  .cardForm {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .subscribeInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    flex: 1;
+    margin-right: 10px;
+    color: var(--color-secondary);
+  }
+  
+  .signUp {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 600;
+    background: linear-gradient(to top right, var(--color-secondary), var(--color-primary));
+    transition: transform 0.2s ease; /* Transición suave al escalar */
+    position: relative;
+  }
+  
+  .signUp:hover {
+    background: linear-gradient(to top right, var(--color-secondary), var(--color-primary));
+    background-size: 200%; /* Aumenta el tamaño del fondo para permitir el movimiento */
+    animation: gradientRotation 5s linear infinite; /* Aplica la animación solo en hover */
+    transform: scale(1.05); /* Efecto de escalar en hover */
+  }
+  
+  @keyframes gradientRotation {
+    0% {
+      background-position: 0% 50%; /* Posición inicial */
+    }
+    50% {
+      background-position: 100% 50%; /* Posición media para un giro completo */
+    }
+    100% {
+      background-position: 0% 50%; /* Regresar a la posición inicial */
+    }
+  }
+    
+  .signUp svg {
+    fill: var(--color-text);
+  }
+  
+.errorContainer {
+    height: 30px; /* Ajusta esta altura según sea necesario */
+    text-align: left;
+    padding-left: 5px;
+    /* Puedes agregar otros estilos aquí, como márgenes o alineación */
+}
+
+.errorMessage {
+    color: var(--color-accent) !important; /* O cualquier color que desees para el mensaje de error */
+    margin: 0; /* Asegúrate de que no haya margen que afecte el espacio */
+    font-weight: 600;
+}
+
+.pngBehindButton {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -30px;
+    top: 5px;
+    z-index: 1;
+    opacity: 0; /* La imagen está oculta por defecto */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.showImage {
+    animation: showPng 0.3s forwards;
+}
+
+.hideImage {
+    animation: hidePng 0.3s forwards;
+}
+
+@keyframes showPng {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+
+}
+
+@keyframes hidePng {
+    0% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        transform: translateX(-25%) scale(0.5);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
+
+    }
+}
